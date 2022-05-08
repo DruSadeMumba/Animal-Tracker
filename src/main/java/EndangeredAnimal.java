@@ -1,2 +1,3 @@
-public class EndangeredAnimal {
+public class EndangeredAnimal extends  Wildlife{
+
 }
