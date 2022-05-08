@@ -2,7 +2,7 @@ import org.sql2o.Connection;
 
 import java.sql.Timestamp;
 
-public abstract class Animal /*implements DatabaseManagement*/{
+public abstract class Animal implements DatabaseManagement{
     public String name;
     public int id;
     public String type;

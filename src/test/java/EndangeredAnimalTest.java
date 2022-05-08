@@ -1,5 +1,4 @@
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class EndangeredAnimalTest {
@@ -52,11 +51,19 @@ public class EndangeredAnimalTest {
         assertEquals("Black Rhino", EndangeredAnimal.all().get(1));
     }
     @Test
-    public void find_returnsMonsterWithSameId_secondEndangeredAnimal() {
+    public void find_returnsAnimalWithSameId_secondEndangeredAnimal() {
         EndangeredAnimal firstEndangeredAnimal = new EndangeredAnimal("White rhino", "Young", "Ill");
         firstEndangeredAnimal.save();
         EndangeredAnimal secondEndangeredAnimal = new EndangeredAnimal("Black rhino", "Old", "Okay");
         secondEndangeredAnimal.save();
         assertEquals(EndangeredAnimal.find(secondEndangeredAnimal.getId()), secondEndangeredAnimal);
     }
+    /*@Test
+    public void find_returnsMonsterWithSameId_secondUnendangeredAnimal() {//passed
+        UnendangeredAnimal firstUnendangeredAnimal = new UnendangeredAnimal("Antelope");
+        firstUnendangeredAnimal.save();
+        UnendangeredAnimal secondUnendangeredAnimal = new UnendangeredAnimal("Giraffe");
+        secondUnendangeredAnimal.save();
+        assertEquals(UnendangeredAnimal.find(secondUnendangeredAnimal.getId()), secondUnendangeredAnimal);
+    }*/
 }
