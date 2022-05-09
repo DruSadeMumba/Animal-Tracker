@@ -25,12 +25,41 @@
                 </div>
             </div>
         </nav>
-        <div class="container-fluid">
+        <div class="container-fluid" id="animalform">
+            <div class="row" id="animalsrow">
+                <hr>
+                <div class="col-md-4">
+                    <div class="card" id="animals">
+                        <div class="card-body">
+                            <h2 class="text-center">Add a new Animal</h2>
+                            <form action="/" method="POST">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Animal</label>
+                                    <input type="text" class="form-control bg-transparent text-dark" id="name" name="name" aria-describedby="nameHelp"  required>
+                                    <div id="nameHelp" class="form-text">Enter the animal name here</div>
+                                </div><br>
+                                <div class="mb-3">
+                                    <label for="type" class="form-label">Type</label>
+                                    <input type="text" class="form-control bg-transparent text-dark" id="type" name="type" aria-describedby="typeHelp">
+                                    <div id="typeHelp" class="form-text">Is this animal endangered or safe?</div>
+                                </div><br>
+                                <div class="mb-3">
+                                    <label for="date" class="form-label">Date</label>
+                                    <input type="date" class="form-control bg-transparent text-dark" id="date" name="date" aria-describedby="dateHelp" required>
+                                    <div id="dateHelp" class="form-text">Select the date</div>
+                                </div><br>
+                                <button type="submit" class="btn btn-dark">Add New Animal</button><br>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div id="line"></div>
+                </div>
+                <div class="col-md-7">
+                    <img src="/images/greyparrot.jpg">
+                </div>
+            </div>
         </div>
-
-        <footer>
-            <hr>
-            <p class="text-center"><img src='/images/copyright.png' alt="copyright">2022 Wildlife-tracker</p>
-        </footer>
     </body>
 </html>

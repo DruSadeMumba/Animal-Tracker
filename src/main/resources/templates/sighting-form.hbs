@@ -25,7 +25,7 @@
                 </div>
             </div>
         </nav>
-        <div class="container-fluid">
+        <div class="container-fluid" id="sightingform">
             <div class="row" id="sightingsrow">
                 <hr>
                 <div class="col-md-7">
@@ -41,17 +41,17 @@
                             <form action="/" method="POST">
                                 <div class="mb-3">
                                     <label for="animal" class="form-label">Animal</label>
-                                    <input type="text" class="form-control bg-transparent text-white" id="animal" name="animal" aria-describedby="animalHelp"  required>
+                                    <input type="text" class="form-control bg-transparent text-dark" id="animal" name="animal" aria-describedby="animalHelp"  required>
                                     <div id="animalHelp" class="form-text">Enter the animal name here</div>
                                 </div><br>
                                 <div class="mb-3">
                                     <label for="location" class="form-label">Location</label>
-                                    <input type="text" class="form-control bg-transparent text-white" id="location" name="location" aria-describedby="powerHelp">
+                                    <input type="text" class="form-control bg-transparent text-dark" id="location" name="location" aria-describedby="locationHelp">
                                     <div id="locationHelp" class="form-text">Choose the location</div>
                                 </div><br>
                                 <div class="mb-3">
                                     <label for="rangername" class="form-label">Ranger's Name</label>
-                                    <input type="text" class="form-control bg-transparent text-white" id="rangername" name="rangername" aria-describedby="rangernameHelp">
+                                    <input type="text" class="form-control bg-transparent text-dark" id="rangername" name="rangername" aria-describedby="rangernameHelp">
                                     <div id="rangernameHelp" class="form-text">Enter your name</div>
                                 </div><br>
                                 <button type="submit" class="btn btn-dark">Add New Sighting</button><br>
@@ -61,12 +61,7 @@
                         </div>
                     </div>
                 </div>
-                <hr>
             </div>
         </div>
-        <footer>
-            <hr>
-            <p class="text-center"><img src='/images/copyright.png' alt="copyright">2022 Wildlife-tracker</p>
-        </footer>
     </body>
 </html>
