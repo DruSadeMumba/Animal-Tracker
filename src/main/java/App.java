@@ -15,5 +15,6 @@ public class App {
         get("/", (request, response)
             -> new ModelAndView(model, "index.hbs"),
             new HandlebarsTemplateEngine());
+
     }
 }
