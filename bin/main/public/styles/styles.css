@@ -21,4 +21,18 @@ footer img {
   font-size: 100px;
   color: rgb(167, 118, 27);
 }
-
+@media screen and (min-width: 900px)    {
+	#line  {
+		width: 0.1rem;
+		height: 500px;
+		background-color: black;
+		margin: 45px;
+	}
+}
+#sightings {
+  background-color: #A3B3A2;
+}
+#sightingsrow {
+  background-color: rgb(49,67,42);
+}
+/*rgb(49,67,42)*/

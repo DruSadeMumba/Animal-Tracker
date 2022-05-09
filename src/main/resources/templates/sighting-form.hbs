@@ -26,7 +26,43 @@
             </div>
         </nav>
         <div class="container-fluid">
-
+            <div class="row" id="sightingsrow">
+                <hr>
+                <div class="col-md-7">
+                    <img src="/images/blackmamba.jpg">
+                </div>
+                <div class="col-md-1">
+                    <div id="line"></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" id="sightings">
+                        <div class="card-body">
+                            <h2 class="text-center">Add a new Sighting!</h2>
+                            <form action="/" method="POST">
+                                <div class="mb-3">
+                                    <label for="animal" class="form-label">Animal</label>
+                                    <input type="text" class="form-control bg-transparent text-white" id="animal" name="animal" aria-describedby="animalHelp"  required>
+                                    <div id="animalHelp" class="form-text">Enter the animal name here</div>
+                                </div><br>
+                                <div class="mb-3">
+                                    <label for="location" class="form-label">Location</label>
+                                    <input type="text" class="form-control bg-transparent text-white" id="location" name="location" aria-describedby="powerHelp">
+                                    <div id="locationHelp" class="form-text">Choose the location</div>
+                                </div><br>
+                                <div class="mb-3">
+                                    <label for="rangername" class="form-label">Ranger's Name</label>
+                                    <input type="text" class="form-control bg-transparent text-white" id="rangername" name="rangername" aria-describedby="rangernameHelp">
+                                    <div id="rangernameHelp" class="form-text">Enter your name</div>
+                                </div><br>
+                                <button type="submit" class="btn btn-dark">Add New Sighting</button><br>
+                                <hr>
+                                <p>Don't see the right animal?<a href="/animals/new">Add</a> a new one first.</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
         </div>
         <footer>
             <hr>
