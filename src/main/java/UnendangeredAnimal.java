@@ -3,7 +3,7 @@ import org.sql2o.Connection;
 import java.util.List;
 
 public class UnendangeredAnimal extends Animal {
-    public static final String DATABASE_TYPE = "unendangered";
+    public static final String DATABASE_TYPE = "safe";
 
     public UnendangeredAnimal(String name, int sightingId){
         this.name = name;
@@ -19,7 +19,7 @@ public class UnendangeredAnimal extends Animal {
         }
     }
     public static List<UnendangeredAnimal> all() {
-        String sql = "SELECT * FROM animals WHERE type = 'endangered'; ";
+        String sql = "SELECT * FROM animals WHERE type = 'safe'; ";
         try(Connection con = DB.sql2o.open()) {
             return con.createQuery(sql)
                     .throwOnMappingFailure(false)

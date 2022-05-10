@@ -32,7 +32,13 @@
             </div>
         </nav>
         <div class="container-fluid">
-
+            {{#if sightings}}
+            {{#each sightings}}
+            <p>Location: {{sightings.location}}</p>
+            <p>Ranger name: {{rangername}}</p>
+            <p>Animal: {{sighting.animalid}}</p>
+            {{/each}}
+            {{/if}}
         </div>
 
         <footer>

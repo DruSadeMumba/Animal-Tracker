@@ -31,9 +31,90 @@
                 </div>
             </div>
         </nav>
-        <div class="container-fluid">
+        <div class="container-fluid" id="animalshbs">
+            <div class="row">
+                <div class="col-md-8" id="animaldetails">
+                    {{#if animals}}
+                        {{#each animals}}
+                            <div class="card">
+                                <div class="card-body" >
+                                    <p>Animal:{{name}}</p>
+                                    <p>Type: {{type}}</p>
+                                    <p>Health: {{health}}</p>
+                                    <p>Age: {{age}}</p>
+                                </div>
+                            </div>
+                        {{/each}}
+                    {{/if}}
+                </div>
+            </div>
+            <h1>Endangered Animals Gallery</h1>
+            <div class="row">
+                <div class="col-md-4" id="endangered1">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="/images/chimp.jpg">
+                        </div>
+                        <div class="card-footer">
+                            <h4>Chimpanzee</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" id="endangered2">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="/images/wilddog.jpg">
+                        </div>
+                        <div class="card-footer">
+                            <h4>Wild dog</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" id="endangered3">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="/images/pangolin.jpg">
+                        </div>
+                        <div class="card-footer">
+                            <h4>Pangolin</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1>Safe Animals Gallery</h1>
+            <div class="row">
+                <div class="col-md-4" id="safe1">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="/images/elephant.jpg">
+                        </div>
+                        <div class="card-footer">
+                            <h4>Bush Elephant</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body" id="safe2">
+                            <img src="/images/agamidlizard.jpg">
+                        </div>
+                        <div class="card-footer">
+                            <h4>Amagid Lizard</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" id="safe3">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="/images/croc.jpg">
+                        </div>
+                        <div class="card-footer">
+                            <h4>Crocodile</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
         <footer>
             <hr>
             <p class="text-center"><img src='/images/copyright.png' alt="copyright">2022 Wildlife-tracker</p>

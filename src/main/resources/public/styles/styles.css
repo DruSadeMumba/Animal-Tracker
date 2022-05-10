@@ -1,8 +1,25 @@
 * {
   font-family: 'Roboto Flex', sans-serif;
 }
-h1 h2 h3 h4 h5 {
+h1 {
   font-family: 'Comfortaa', cursive;
+  text-align: center;
+}
+h2 {
+  font-family: 'Comfortaa', cursive;
+  text-align: center;
+}
+h3 {
+  font-family: 'Comfortaa', cursive;
+  text-align: center;
+}
+h4 {
+  font-family: 'Comfortaa', cursive;
+  text-align: center;
+}
+h5 {
+  font-family: 'Comfortaa', cursive;
+  text-align: center;
 }
 img  {
   height: 100%;
@@ -42,7 +59,29 @@ footer img {
 #animals {
   background-color: #A3B3A2;
 }
+#safe1{
+transform: rotate(-1.5deg);
+}
 
+#safe3 {
+transform: rotate(1.5deg);
+}
+#endangered1{
+transform: rotate(-1.5deg);
+}
+#endangered3{
+transform: rotate(1.5deg);
+}
+.card  {
+background-color: #A3B3A2;
+}
+#animalshbs {
+background-color: rgb(49,67,42);
+}
+#animaldetails  {
+  display: grid;
+  grid-template-columns: 1fr, 1fr, 1fr,1fr ;
+}
 /*rgb(49,67,42)
 #3E544C
 */

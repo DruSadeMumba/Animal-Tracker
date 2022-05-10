@@ -29,6 +29,7 @@ public class EndangeredAnimal extends Animal {
         } else {
             return this.getName().equals(newEndangeredAnimal.getName()) &&
                     this.getAge() == newEndangeredAnimal.getAge() &&
+                    this.getSightedon() == newEndangeredAnimal.getSightedon() &&
                     this.getHealth() == newEndangeredAnimal.getHealth();
         }
     }
