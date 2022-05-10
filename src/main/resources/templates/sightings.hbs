@@ -32,14 +32,26 @@
             </div>
         </nav>
         <div class="container-fluid">
-
-            {{#if sightings}}
-            {{#each sightings}}
-            <h2>Animal: {{animalName}}</h2>
-            <p>Location: {{location}}</p>
-            <p>Ranger name: {{rangerName}}</p>
-            {{/each}}
-            {{/if}}
+            <div class="row" id="sightinghbs">
+                <div class="col-md-6">
+                    {{#if sightings}}
+                        {{#each sightings}}
+                            <div class="card">
+                                <div class="card-body">
+                                    <h2>Animal: {{animalName}}</h2>
+                                    <p>Location: {{location}}</p>
+                                    <p>Ranger name: {{rangerName}}</p>
+                                </div>
+                            </div>
+                        {{/each}}
+                        {{else}}
+                        <h1>ADD A NEW SIGHTING</h1>
+                    {{/if}}
+                </div>
+                <div class="col-md-6">
+                    <img src="/images/leopard.jpg">
+                </div>
+            </div>
         </div>
         <footer>
             <hr>

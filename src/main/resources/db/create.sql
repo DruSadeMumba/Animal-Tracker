@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS animals (
 
 CREATE TABLE IF NOT EXISTS sightings (
   id int PRIMARY KEY auto_increment,
-  animalid INTEGER,
+  animalname VARCHAR,
   rangername VARCHAR,
   location VARCHAR
 );
