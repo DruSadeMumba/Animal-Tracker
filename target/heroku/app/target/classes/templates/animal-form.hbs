@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/styles/styles.css">
+        <title>WILDLIFE TRACKER</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">WILDLIFE-TRACKER</a>
+                <div class="collapse navbar-collapse d-flex align-items-end flex-column" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/animals">Animals</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid" id="animalform">
+            <div class="row" id="animalsrow">
+                <hr>
+                <div class="col-md-4">
+                    <div class="card" id="animals">
+                        <div class="card-body">
+                            <h2 class="text-center">Add a new Animal</h2>
+                            <div class="mb-3">
+                                <label for="type" class="form-label">Type</label>
+                                <select class="form-control bg-transparent text-dark" id="type" name="type" aria-describedby="typeHelp" value="{{type}}" required>
+                                    <option name="endangered" >Endangered</option>
+                                    <option name="safe">Safe</option>
+                                </select>
+                            </div>
+                            <form action="/animals/endangered" method="POST">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Animal</label>
+                                    <input type="text" class="form-control bg-transparent text-dark" id="name" name="name" aria-describedby="nameHelp" value="{{name}}" required>
+                                    <div id="nameHelp" class="form-text">Enter the animal name here</div>
+                                </div><br>
+                                <div class="mb-3">
+                                    <label for="age" class="form-label">Age</label>
+                                    <select class="form-control bg-transparent text-dark" id="age" name="age" aria-describedby="ageHelp" value="{{age}}"required>
+                                        <option value="Newborn">Newborn</option>
+                                        <option value="Young">Young</option>
+                                        <option value="Adult">Adult</option>
+                                    </select>
+                                    <div id="ageHelp" class="form-text">Enter the age?</div>
+                                </div><br>
+                                <div class="mb-3">
+                                    <label for="health" class="form-label">Health</label>
+                                    <select class="form-control bg-transparent text-dark" id="health" name="health" aria-describedby="healthHelp" value="{{health}}"required>
+                                        <option value="Healthy">Healthy</option>
+                                        <option value="Ill">Sick</option>
+                                    </select>
+                                    <div id="healthHelp" class="form-text">Is this animal healthy or sick?</div>
+                                </div><br>
+
+                                <div class="mb-3">
+                                    <label for="sightingId" class="form-label">SightingId</label>
+                                    <input type="number" class="form-control bg-transparent text-dark" id="sightingId" name="sightingId" aria-describedby="sightingIdHelp" value="{{sightingId}}" required>
+                                    <div id="sightingIdHelp" class="form-text">Select</div>
+                                </div><br>
+
+                                <button type="submit" class="btn btn-dark">Add New Animal</button><br>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div id="line"></div>
+                </div>
+                <div class="col-md-7">
+                    <img src="/images/greyparrot.jpg">
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+<!--<div class="form-group">
+		<label for="type">Type</label>
+		<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="type"  value="UnendangeredAnimal" onClick="window.location = '/animals/new';" checked>
+				<label class="form-check-label" for="defaultCheck2">Safe</label>
+		</div>
+		<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="type"  value="EndangeredAnimal" onClick="window.location = '/animals/new';" >
+				<label class="form-check-label" for="defaultCheck2">Endangered</label>
+		</div>
+</div>
+<h2 class="text-center">Add a new Animal</h2>
+<form action="/animals/safe" method="POST" class="safe">
+		<div class="mb-3">
+				<label for="name" class="form-label">Animal</label>
+				<input type="text" class="form-control bg-transparent text-dark" id="name" name="name" aria-describedby="nameHelp"  required>
+				<div id="nameHelp" class="form-text">Enter the animal name here</div>
+		</div><br>
+		<div class="mb-3">
+				<label for="date" class="form-label">Date</label>
+				<input type="date" class="form-control bg-transparent text-dark" id="date" name="date" aria-describedby="dateHelp" required>
+				<div id="dateHelp" class="form-text">Select the date</div>
+	</div><br>
+<button type="submit" class="btn btn-dark">Add New Animal</button><br>
+</form>-->
+
+<!--</div>
+</div>-->
+<!--<div class="card">
+                        <div class="card-body">
+                            <h1>Add Animal</h1>
+                            <form action="/animals" method="post">
+
+                                    <div class="form-group">
+                                        <label for="type">Type</label>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="checkbox" name="type"  value="Not endangered" onClick="window.location = '/animals/new';" >
+                                            <label class="form-check-label" for="defaultCheck1">Safe</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="type"  value="Endangered" onClick="window.location = '/animals/new/endangered';" checked>
+                                            <label class="form-check-label" for="defaultCheck1">Endangered</label>
+                                        </div>
+                                    </div>&lt;!&ndash;finish&ndash;&gt;
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input type="text" class="form-control "  value="{{this.name}}" id="name" name="name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="health">Health</label>
+                                        <select class="form-control" id="health" name="health">
+                                            <option value="Healthy">Healthy</option>
+                                            <option value="Okay">Okay</option>
+                                            <option value="Ill">Ill</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="age">Age</label>
+                                        <select class="form-control" id="age" name="age">
+                                            <option value="Newborn">Newborn</option>
+                                            <option value="Young">Young</option>
+                                            <option value="Adult">Adult</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="type">Type</label><br>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="type" onClick="window.location = '/animals/new';" checked>
+                                            <label class="form-check-label" for="defaultCheck2">Not endangered</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="type" value="Endangered" onClick="window.location = '/animals/new/endangered';">
+                                            <label class="form-check-label" for="defaultCheck2">Endangered</label>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input type="text" class="form-control" value="{{this.name}}" id="name" name="name">
+                                    </div>
+
+
+                                <br>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-dark "> Add </button>
+                                </div>
+
+                            </form>-->

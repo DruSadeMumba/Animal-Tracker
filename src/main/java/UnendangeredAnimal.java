@@ -12,12 +12,14 @@ public class UnendangeredAnimal extends Animal {
     }
     @Override
     public boolean equals(Object otherUnendangeredAnimal){
-        if (!(otherUnendangeredAnimal instanceof UnendangeredAnimal newUnendangeredAnimal)) {
+        if (!(otherUnendangeredAnimal instanceof UnendangeredAnimal)) {
             return false;
         } else {
+            UnendangeredAnimal newUnendangeredAnimal = (UnendangeredAnimal) otherUnendangeredAnimal;
             return this.getName().equals(newUnendangeredAnimal.getName());
         }
     }
+
     public static List<UnendangeredAnimal> all() {
         String sql = "SELECT * FROM animals WHERE type = 'safe'; ";
         try(Connection con = DB.sql2o.open()) {

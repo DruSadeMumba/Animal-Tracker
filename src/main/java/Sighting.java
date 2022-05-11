@@ -31,9 +31,10 @@ public class Sighting implements DatabaseManagement{
 
     @Override
     public boolean equals(Object otherSightings) {
-        if (!(otherSightings instanceof Sighting newSightings)) {
+        if (!(otherSightings instanceof Sighting)) {
             return false;
         } else {
+            Sighting newSightings = (Sighting) otherSightings;
             return this.getLocation().equals(newSightings.getLocation()) &&
                     this.getRangerName().equals(newSightings.getRangerName());
         }

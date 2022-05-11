@@ -1,8 +1,8 @@
+
 import org.sql2o.Sql2o;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -10,9 +10,19 @@ import java.util.Map;
 import static spark.Spark.*;
 
 public class App {
+    static int getHerokuAssignedPort() {
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        if (processBuilder.environment().get("PORT") != null) {
+            return Integer.parseInt(processBuilder.environment().get("PORT"));
+        }
+        return 2345;
+    }
     public static void main(String[] args) {
+        port(getHerokuAssignedPort());
         staticFileLocation("/public");
-        port(2345);
+
+        String connectionString = "jdbc:postgresql://ec2-34-236-94-53.compute-1.amazonaws.com:5432/d2lajsvmr7vl06";
+        Sql2o sql2o = new Sql2o(connectionString, "mzpamolmgkdtkl", "c0a03c32de7bbd946d36bba6a19df953546104d33d9df1b5a968543b28a173e4");
 
         Map<String, Object> model = new HashMap<String, Object>();
 
@@ -23,7 +33,7 @@ public class App {
 
                 //sightings page
         get("/sightings", (request, response) -> {
-            model.put("sightings",Sighting.all());
+            model.put("sightings", Sighting.all());
             System.out.println(Sighting.all());
             return new ModelAndView(model, "sightings.hbs");
         },new HandlebarsTemplateEngine());

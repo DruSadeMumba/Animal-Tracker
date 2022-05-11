@@ -1,3 +1,5 @@
+/*
+
 import org.junit.Rule;
 import org.junit.jupiter.api.Test;
 import org.junit.rules.ExpectedException;
@@ -53,8 +55,10 @@ public class EndangeredAnimalTest extends DatabaseRule{
         firstEndangeredAnimal.save();
         EndangeredAnimal secondEndangeredAnimal = new EndangeredAnimal("Black rhino", "Old", "Okay", 1);
         secondEndangeredAnimal.save();
-        /*assertEquals("White rhino", EndangeredAnimal.all().get(0));//Actual :EndangeredAnimal@78fbff54
-        assertEquals("Black Rhino", EndangeredAnimal.all().get(1));*/
+
+        assertEquals("White rhino", EndangeredAnimal.all().get(0));//Actual :EndangeredAnimal@78fbff54
+        assertEquals("Black Rhino", EndangeredAnimal.all().get(1));
+
         assertEquals(EndangeredAnimal.all().get(0), firstEndangeredAnimal);
         assertEquals(EndangeredAnimal.all().get(1), secondEndangeredAnimal);
     }
@@ -67,3 +71,4 @@ public class EndangeredAnimalTest extends DatabaseRule{
         assertEquals(EndangeredAnimal.find(secondEndangeredAnimal.getId()), secondEndangeredAnimal);
     }
 }
+*/
