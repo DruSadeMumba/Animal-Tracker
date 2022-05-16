@@ -1,4 +1,4 @@
-/*
+
 
 import org.junit.Rule;
 import org.junit.jupiter.api.Test;
@@ -71,4 +71,4 @@ public class EndangeredAnimalTest extends DatabaseRule{
         assertEquals(EndangeredAnimal.find(secondEndangeredAnimal.getId()), secondEndangeredAnimal);
     }
 }
-*/
+
