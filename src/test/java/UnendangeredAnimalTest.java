@@ -1,4 +1,4 @@
-/*
+
 
 import org.junit.Rule;
 import org.junit.jupiter.api.Test;
@@ -64,4 +64,4 @@ public class UnendangeredAnimalTest extends DatabaseRule{
         assertEquals(UnendangeredAnimal.find(secondUnendangeredAnimal.getId()), secondUnendangeredAnimal);
     }
 }
-*/
+
