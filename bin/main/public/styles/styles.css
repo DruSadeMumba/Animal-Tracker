@@ -1,0 +1,48 @@
+* {
+  font-family: 'Roboto Flex', sans-serif;
+}
+h1 h2 h3 h4 h5 {
+  font-family: 'Comfortaa', cursive;
+}
+img  {
+  height: 100%;
+  width: 100%;
+}
+footer img {
+  height: 25px;
+  width: 25px;
+}
+#logo {
+  position: absolute;
+  left: 5%;
+  right: 75%;
+  top: 20%;
+  bottom: 70%;
+  font-size: 100px;
+  color: rgb(167, 118, 27);
+}
+@media screen and (min-width: 900px)    {
+	#line  {
+		width: 0.1rem;
+		height: 650px;
+		background-color: black;
+		margin: 45px;
+	}
+}
+
+#sightings {
+  background-color: #A3B3A2;
+}
+#sightingsrow {
+  background-color: rgb(49,67,42);
+}
+#animalsrow {
+  background-color: #87A378;
+}
+#animals {
+  background-color: #A3B3A2;
+}
+
+/*rgb(49,67,42)
+#3E544C
+*/
